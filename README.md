@@ -8,7 +8,6 @@ It fixes the `flock` issue due to NFS mount of your home directory.
 
 Install
 -------
-
 Run this command from your terminal:
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrew_fix/master/install.sh)"
