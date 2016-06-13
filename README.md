@@ -28,7 +28,7 @@ Uninstall
 Simply remove these lines from your `.zshrc`
 ```
 # Load Homebrew Fix script
-source \$HOME/.brew_fix.zsh
+source $HOME/.brew_fix.zsh
 ```
 
 And delete `.brew_fix.zsh` in your home directory.
