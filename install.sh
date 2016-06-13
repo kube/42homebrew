@@ -35,5 +35,5 @@ EOL
 
 fi
 
-source $HOME/.zshrc
+source $HOME/.brew_fix.zsh
 brew update
