@@ -25,7 +25,7 @@ It is simple to remove, and you can re-run it multiple times without duplication
 
 Uninstall
 ---------
-Simply remove these lines from your .zshrc
+Simply remove these lines from your `.zshrc`
 ```
 # Load Homebrew Fix script
 source \$HOME/.brew_fix.zsh
