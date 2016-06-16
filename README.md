@@ -17,17 +17,14 @@ How it works
 ------------
 This script removes your current Homebrew installation in your home, and reinstalls it properly from the Homebrew Github repo.
 
-Then it simply creates a `.brew_fix.zsh` script in your home directory, and modifies your `.zshrc` to source the script.
+Then it simply creates a `.homebrew.sh` script in your home directory, and adds a LaunchAgent in `~/Library/LaunchAgents`.
 
 It is simple to remove, and you can re-run it multiple times without duplication.
 
 
 Uninstall
 ---------
-Simply remove these lines from your `.zshrc`
 ```
-# Load Homebrew Fix script
-source $HOME/.brew_fix.zsh
+rm ~/Library/LaunchAgents/io.kube.homebrewfix
+rm ~/.homebrewfix.sh
 ```
-
-And delete `.brew_fix.zsh` in your home directory.
