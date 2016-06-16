@@ -2,17 +2,22 @@
 rm -rf $HOME/.brew
 git clone https://github.com/Homebrew/homebrew $HOME/.brew
 
-# Create .brew_fix script in home directory
-cat > $HOME/.brew_fix.zsh <<EOL
+# Create .homebrewfix script in home directory
+cat > $HOME/.homebrewfix.sh <<EOL
 # HOMEBREW CONFIG
 
 # Add brew to path
 export PATH=\$HOME/.brew/bin:\$PATH
+launch setenv PATH $PATH
 
 # Set Homebrew temporary folders
 export HOMEBREW_CACHE=/tmp/\$USER/Homebrew/Caches
 export HOMEBREW_TEMP=/tmp/\$USER/Homebrew/Temp
 export HOMEBREW_LOCKS=/tmp/\$USER/Homebrew/Locks
+
+launch setenv HOMEBREW_CACHE \$HOMEBREW_CACHE
+launch setenv HOMEBREW_TEMP  \$HOMEBREW_TEMP
+launch setenv HOMEBREW_LOCKS \$HOMEBREW_LOCKS
 
 mkdir -p \$HOMEBREW_CACHE
 mkdir -p \$HOMEBREW_TEMP
@@ -21,19 +26,36 @@ mkdir -p \$HOMEBREW_TEMP
 rm -rf \$HOME/.brew/Library/Locks
 mkdir -p \$HOMEBREW_LOCKS
 ln -s /tmp/\$USER/Homebrew/Locks \$HOME/.brew/Library/Locks
-
 EOL
 
-# Add .brew_fix sourcing in your .zshrc
-if ! grep -q "# Load Homebrew Fix script" "$HOME/.zshrc"; then
+# Add .homebrewfix sourcing to launchd
+cat > ~/Library/LaunchAgents/io.kube.homebrewfix.plist <<EOL
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>io.kube.homebrewfix</string>
 
-cat >> $HOME/.zshrc <<EOL
+    <key>ProgramArguments</key>
+    <array>
+      <string>zsh</string>
+      <string>-c</string>
+      <string>~/.homebrewfix.sh</string>
+    </array>
 
-# Load Homebrew Fix script
-source \$HOME/.brew_fix.zsh
+    <key>KeepAlive</key>
+    <false/>
+    <key>RunAtLoad</key>
+    <true/>
+  </dict>
+</plist>
 EOL
 
-fi
+chmod +x ~/.homebrewfix.sh
 
-source $HOME/.brew_fix.zsh
+# Source .homebrewfix and update Homebrew
+source $HOME/.homebrewfix.sh
 brew update
+
+echo "\nPlease restart your terminal to apply modifications"
