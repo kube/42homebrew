@@ -17,7 +17,7 @@ How it works
 ------------
 This script removes your current Homebrew installation in your home, and reinstalls it properly from the Homebrew Github repo.
 
-Then it simply creates a `.homebrew.sh` script in your home directory, and adds a LaunchAgent in `~/Library/LaunchAgents`.
+Then it simply creates a `.homebrew.sh` script in your home directory, and adds a LaunchAgent in `~/Library/LaunchAgents` to source the script each time you open a session.
 
 It is simple to remove, and you can re-run it multiple times without duplication.
 
