@@ -17,16 +17,16 @@ cat > $HOME/.homebrewfix.sh <<EOL
 
 # Add brew to path
 export PATH=\$HOME/.brew/bin:\$PATH
-launch setenv PATH $PATH
+launchctl setenv PATH $PATH
 
 # Set Homebrew temporary folders
 export HOMEBREW_CACHE=/tmp/\$USER/Homebrew/Caches
 export HOMEBREW_TEMP=/tmp/\$USER/Homebrew/Temp
 export HOMEBREW_LOCKS=/tmp/\$USER/Homebrew/Locks
 
-launch setenv HOMEBREW_CACHE \$HOMEBREW_CACHE
-launch setenv HOMEBREW_TEMP  \$HOMEBREW_TEMP
-launch setenv HOMEBREW_LOCKS \$HOMEBREW_LOCKS
+launchctl setenv HOMEBREW_CACHE \$HOMEBREW_CACHE
+launchctl setenv HOMEBREW_TEMP  \$HOMEBREW_TEMP
+launchctl setenv HOMEBREW_LOCKS \$HOMEBREW_LOCKS
 
 mkdir -p \$HOMEBREW_CACHE
 mkdir -p \$HOMEBREW_TEMP
