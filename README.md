@@ -10,7 +10,7 @@ Install
 -------
 Run this command from your terminal:
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrew_fix/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrewfix/master/install.sh)"
 ```
 
 How it works
