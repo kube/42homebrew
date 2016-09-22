@@ -24,7 +24,7 @@ ln -s /tmp/\$USER/Homebrew/Locks \$HOME/.brew/var/library/locks
 
 EOL
 
-# Add .brew_fix sourcing in your .zshrc
+# Add .brew_fix sourcing in your .zshrc if not already present
 if ! grep -q "# Load Homebrew Fix script" "$HOME/.zshrc"; then
 
 cat >> $HOME/.zshrc <<EOL
