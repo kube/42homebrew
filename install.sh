@@ -1,6 +1,6 @@
 # Delete and reinstall Homebrew from Github repo
 rm -rf $HOME/.brew
-git clone --depth=1 https://github.com/Homebrew/homebrew $HOME/.brew
+git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew
 
 # Create .brew_fix script in home directory
 cat > $HOME/.brew_fix.zsh <<EOL
