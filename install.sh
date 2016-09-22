@@ -12,15 +12,21 @@ export PATH=\$HOME/.brew/bin:\$PATH
 # Set Homebrew temporary folders
 export HOMEBREW_CACHE=/tmp/\$USER/Homebrew/Caches
 export HOMEBREW_TEMP=/tmp/\$USER/Homebrew/Temp
-export HOMEBREW_LOCKS=/tmp/\$USER/Homebrew/Locks
 
 mkdir -p \$HOMEBREW_CACHE
 mkdir -p \$HOMEBREW_TEMP
 
-# Create symlink for Locks folder
-rm -rf \$HOME/.brew/Library/Locks
-mkdir -p \$HOMEBREW_LOCKS
-ln -s /tmp/\$USER/Homebrew/Locks \$HOME/.brew/var/library/locks
+HOMEBREW_LOCKS_TARGET=/tmp/\$USER/Homebrew/Locks
+HOMEBREW_LOCKS_FOLDER=\$HOME/.brew/var/library/locks
+
+mkdir -p \$HOMEBREW_LOCKS_TARGET
+
+# Create symlink for Locks folders
+# if Locks folder is not already a symlink
+if [[ -L \$HOMEBREW_LOCKS_FOLDER && -d \$HOMEBREW_LOCKS_FOLDER ]]; then
+  rm -rf \$HOMEBREW_LOCKS_FOLDER
+  ln -s \$HOMEBREW_LOCKS_TARGET \$HOMEBREW_LOCKS_FOLDER
+fi
 
 EOL
 
