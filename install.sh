@@ -1,3 +1,13 @@
+
+      #########.
+     ########",#:
+   #########',##".
+  ##'##'## .##',##.
+   ## ## ## # ##",#.
+    ## ## ## ## ##'
+     ## ## ## :##
+      ## ## ##."
+
 # Delete and reinstall Homebrew from Github repo
 rm -rf $HOME/.brew
 git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew
