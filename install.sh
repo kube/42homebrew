@@ -31,12 +31,9 @@ HOMEBREW_LOCKS_FOLDER=\$HOME/.brew/var/library/locks
 
 mkdir -p \$HOMEBREW_LOCKS_TARGET
 
-# Create symlink for Locks folders
-# if Locks folder is not already a symlink
-if [[ -L \$HOMEBREW_LOCKS_FOLDER && -d \$HOMEBREW_LOCKS_FOLDER ]]; then
-  rm -rf \$HOMEBREW_LOCKS_FOLDER
-  ln -s \$HOMEBREW_LOCKS_TARGET \$HOMEBREW_LOCKS_FOLDER
-fi
+# Symlink to Locks target folder
+rm \$HOMEBREW_LOCKS_FOLDER
+ln -s \$HOMEBREW_LOCKS_TARGET \$HOMEBREW_LOCKS_FOLDER
 
 EOL
 
