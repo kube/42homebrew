@@ -27,13 +27,13 @@ mkdir -p \$HOMEBREW_CACHE
 mkdir -p \$HOMEBREW_TEMP
 
 HOMEBREW_LOCKS_TARGET=/tmp/\$USER/Homebrew/Locks
-HOMEBREW_LOCKS_FOLDER=\$HOME/.brew/var/library/locks
+HOMEBREW_LOCKS_FOLDER=\$HOME/.brew/var/homebrew/locks
 
 mkdir -p \$HOMEBREW_LOCKS_TARGET
 
 # Symlink to Locks target folder
 rm -f \$HOMEBREW_LOCKS_FOLDER
-ln -s \$HOMEBREW_LOCKS_FOLDER \$HOMEBREW_LOCKS_TARGET
+ln -s \$HOMEBREW_LOCKS_TARGET \$HOMEBREW_LOCKS_FOLDER
 
 EOL
 
