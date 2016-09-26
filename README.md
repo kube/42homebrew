@@ -5,6 +5,8 @@ This script installs Homebrew properly in your home on your 42 session.
 
 It fixes the `flock` issue due to NFS mount of your home directory.
 
+It will also move all temporary Homebrew data (`Temp`, `Cache`, `Locks`) to a dedicated folder in `/tmp`, leaving your home directory cleaner, so it's useful even if you're on the new ISCSI sessions that support `flock` operations. 
+
 
 Install
 -------
