@@ -11,7 +11,8 @@ It will move all temporary Homebrew data (`Temp`, `Cache`, `Locks`) to a dedicat
 Install
 -------
 Run this command from your terminal:
-```
+
+```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrewfix/master/install.sh)"
 ```
 
