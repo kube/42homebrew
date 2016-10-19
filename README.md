@@ -3,9 +3,9 @@
 
 This script installs Homebrew properly in your home on your 42 session.
 
-It fixes the `flock` issue due to NFS mount of your home directory.
+It was created to fix the `flock` issue on **NFS sessions**, but works well on **ISCSI sessions** too.
 
-It will also move all temporary Homebrew data (`Temp`, `Cache`, `Locks`) to a dedicated folder in `/tmp`, leaving your home directory cleaner, so it's useful even if you're on the new ISCSI sessions that support `flock` operations. 
+It will move all temporary Homebrew data (`Temp`, `Cache`, `Locks`) to a dedicated folder in `/tmp`, leaving your home directory cleaner, so it's useful even if you're on the new ISCSI sessions. 
 
 
 Install
@@ -27,7 +27,8 @@ It is simple to remove, and you can re-run it multiple times without duplication
 Uninstall
 ---------
 Simply remove these lines from your `.zshrc`
-```
+
+```sh
 # Load Homebrew Fix script
 source $HOME/.brew_fix.zsh
 ```
