@@ -14,7 +14,7 @@ git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew
 
 # Create .brewconfig script in home directory 
 cat > $HOME/.brewconfig.zsh <<EOL
-# HOMEBREW CONFIG8
+# HOMEBREW CONFIG
 
 # Add brew to path
 export PATH=\$HOME/.brew/bin:\$PATH
