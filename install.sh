@@ -52,4 +52,5 @@ EOL
 fi
 
 source $HOME/.brewconfig.zsh
+rehash
 brew update
