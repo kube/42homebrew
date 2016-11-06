@@ -39,18 +39,16 @@ if ! [[ -L \$HOMEBREW_LOCKS_FOLDER && -d \$HOMEBREW_LOCKS_FOLDER ]]; then
   rm -rf \$HOMEBREW_LOCKS_FOLDER
   ln -s \$HOMEBREW_LOCKS_TARGET \$HOMEBREW_LOCKS_FOLDER
 fi
-
 EOL
 
 # Add .brewconfig sourcing in your .zshrc if not already present
-if ! grep -q "# Load Homebrew config script" "$HOME/.zshrc"; then
-
+if ! grep -q "# Load Homebrew config script" $HOME/.zshrc
+then
 cat >> $HOME/.zshrc <<EOL
 
 # Load Homebrew config script
 source \$HOME/.brewconfig.zsh
 EOL
-
 fi
 
 source $HOME/.brewconfig.zsh
