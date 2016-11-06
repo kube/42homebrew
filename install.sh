@@ -12,9 +12,9 @@
 rm -rf $HOME/.brew
 git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew
 
-# Create .brew_fix script in home directory
-cat > $HOME/.brew_fix.zsh <<EOL
-# HOMEBREW CONFIG
+# Create .brewconfig script in home directory 
+cat > $HOME/.brewconfig.zsh <<EOL
+# HOMEBREW CONFIG8
 
 # Add brew to path
 export PATH=\$HOME/.brew/bin:\$PATH
@@ -42,16 +42,16 @@ fi
 
 EOL
 
-# Add .brew_fix sourcing in your .zshrc if not already present
-if ! grep -q "# Load Homebrew Fix script" "$HOME/.zshrc"; then
+# Add .brewconfig sourcing in your .zshrc if not already present
+if ! grep -q "# Load Homebrew config script" "$HOME/.zshrc"; then
 
 cat >> $HOME/.zshrc <<EOL
 
-# Load Homebrew Fix script
-source \$HOME/.brew_fix.zsh
+# Load Homebrew config script
+source \$HOME/.brewconfig.zsh
 EOL
 
 fi
 
-source $HOME/.brew_fix.zsh
+source $HOME/.brewconfig.zsh
 brew update
