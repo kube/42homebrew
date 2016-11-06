@@ -55,5 +55,3 @@ fi
 
 source $HOME/.brew_fix.zsh
 brew update
-
-echo "Please open a new terminal to apply modifications"
