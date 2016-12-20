@@ -1,11 +1,11 @@
 42 Homebrew
 ===========
 
-This script installs Homebrew properly in your home on your 42 session.
+### Install Homebrew properly in your home on your 42 session.
 
-It works on **ISCSI sessions**, and fixes `flock` issues on **NFS sessions**.
+Works on **ISCSI sessions**, and fixes `flock` issues on **NFS sessions**.
 
-It will also move all temporary Homebrew data (`Temp`, `Cache`, `Locks`) to a dedicated folder in `/tmp`, leaving your home directory cleaner.
+It will also move all temporary Homebrew data (`Temp` and `Cache`) to a dedicated folder in `/tmp`, leaving your home directory cleaner.
 
 
 Install
