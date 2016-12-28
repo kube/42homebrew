@@ -5,7 +5,7 @@
 
 Works on **ISCSI sessions**, and fixes `flock` issues on **NFS sessions**.
 
-It will also move all temporary Homebrew data (`Temp` and `Cache`) to a dedicated folder in `/tmp`, leaving your home directory cleaner.
+Moves temporary Homebrew data (`Temp` and `Cache`) to `/tmp`, leaving your home directory cleaner.
 
 
 Install
@@ -13,7 +13,7 @@ Install
 Run this command from your terminal:
 
 ```sh
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrew/master/install.sh)"
+zsh -c "$(curl -fsSL https://raw.github.com/kube/42homebrew/master/install.sh)"
 ```
 
 Homebrew is now ready on your session.
