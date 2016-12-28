@@ -1,7 +1,7 @@
 42 Homebrew
 ===========
 
-### Install Homebrew properly in your home on your 42 session.
+### Install Homebrew properly on your 42 session.
 
 Works on **ISCSI sessions**, and fixes `flock` issues on **NFS sessions**.
 
