@@ -13,7 +13,7 @@ Install
 Run this command from your terminal:
 
 ```sh
-zsh -c "$(curl -fsSL https://raw.github.com/kube/42homebrew/master/install.sh)"
+curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
 ```
 
 Homebrew is now ready on your session.
