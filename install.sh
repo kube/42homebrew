@@ -22,6 +22,7 @@ export PATH=\$HOME/.brew/bin:\$PATH
 # Set Homebrew temporary folders
 export HOMEBREW_CACHE=/tmp/\$USER/Homebrew/Caches
 export HOMEBREW_TEMP=/tmp/\$USER/Homebrew/Temp
+export HOMEBREW_CASK_OPTS='--appdir=~/Applications'
 
 mkdir -p \$HOMEBREW_CACHE
 mkdir -p \$HOMEBREW_TEMP
