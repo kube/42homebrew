@@ -51,7 +51,7 @@ fi
 source $HOME/.brewconfig.zsh
 rehash
 brew update
-sleep 3
+sleep 2
 brew install minikube
 
 echo "\nPlease open a new shell to finish installation"
