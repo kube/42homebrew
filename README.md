@@ -5,7 +5,7 @@
 42 Homebrew
 ===========
 
-### Install Homebrew properly on your 42 session
+### Install Homebrew properly on your 1337 session
 
 Works on **ISCSI sessions**, and fixes `flock` issues on **NFS sessions**.
 
@@ -17,7 +17,7 @@ Install
 Run this command from your terminal:
 
 ```sh
-curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+curl -fsSL https://rawgit.com/atah1r1/42homebrew/master/install.sh | zsh
 ```
 
 Homebrew is now ready on your session.
