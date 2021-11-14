@@ -20,6 +20,14 @@ Run this command from your terminal:
 curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
 ```
 
+or if you want it directly into your 'goinfre'
+
+```sh
+curl -fsSL https://rawgit.com/kube/42homebrew/master/install-goinfre.sh | zsh
+```
+
+
+
 Homebrew is now ready on your session.
 
 How it works
