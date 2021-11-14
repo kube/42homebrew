@@ -17,13 +17,13 @@ Install
 Run this command from your terminal:
 
 ```sh
-curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+curl -fsSL https://raw.githubusercontent.com/omimouni/42homebrew/master/install.sh | zsh
 ```
 
 or if you want it directly into your 'goinfre'
 
 ```sh
-curl -fsSL https://rawgit.com/kube/42homebrew/master/install-goinfre.sh | zsh
+curl -fsSL https://raw.githubusercontent.com/omimouni/42homebrew/master/install-goinfre.sh | zsh
 ```
 
 
